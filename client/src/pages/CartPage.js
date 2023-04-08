@@ -2,12 +2,16 @@ import React, { useState, useEffect } from "react";
 import Layout from "./../components/Layout/Layout";
 import { useCart } from "../context/cart";
 import { useAuth } from "../context/auth";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import DropIn from "braintree-web-drop-in-react";
 import { AiFillWarning } from "react-icons/ai";
 import axios from "axios";
 import toast from "react-hot-toast";
 import Column from "antd/es/table/Column";
+import MobileMenu from "../components/MobileMenu";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
+import styled from "styled-components";
 // import "../styles/resp";
 
 const CartPage = () => {
@@ -80,6 +84,12 @@ const CartPage = () => {
   };
   return (
     <Layout>
+       <div className="header">
+          <Link to="/">
+            <FontAwesomeIcon icon={faAngleLeft} className="iconLeft" />
+          </Link>
+          <h3>My Cart</h3>
+        </div>
       <div className=" cart-page">
         <div className="row">
           <div className="col-md-12">
@@ -197,8 +207,31 @@ const CartPage = () => {
           </div>
         </div>
       </div>
+      <MobileMenu></MobileMenu>
     </Layout>
   );
 };
+
+
+const CartContainer = styled.div`
+  .header {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid lightgray;
+  }
+  .header h3 {
+    font-weight: 500;
+  }
+  .header .iconLeft {
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    color: black;
+  }
+
+  
+`;
 
 export default CartPage;

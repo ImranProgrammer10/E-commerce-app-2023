@@ -20,7 +20,9 @@ const Categories = () => {
           ))}
         </div>
       </div>
+      
     </Layout>
+    
   );
 };
 

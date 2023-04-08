@@ -7,6 +7,7 @@ import "../styles/CategoryProductStyles.css";
 import axios from "axios";
 import useCategory from "../hooks/useCategory";
 import { FaShoppingCart } from "react-icons/fa";
+import MobileMenu from "../components/MobileMenu";
 const CategoryProduct = () => {
   const params = useParams();
   const navigate = useNavigate();
@@ -90,7 +91,7 @@ const CategoryProduct = () => {
           </div>
                 </CardWrapper>
                
-              
+                <MobileMenu></MobileMenu>
               </ Container>
               </div>
             

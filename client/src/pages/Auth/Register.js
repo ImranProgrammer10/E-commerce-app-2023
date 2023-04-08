@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import "../../styles/AuthStyles.css";
 import Layout from '../../components/Layout/Layout'
 import axios from "axios"
@@ -112,6 +112,7 @@ const Register = () => {
         <button type="submit" className="btn btn-primary">
           REGISTER
         </button>
+        <p><small>Already have an account? <Link className='text-primary' to="/login"> Please Login</Link></small></p>
       </form>
     </div>
   </Layout>

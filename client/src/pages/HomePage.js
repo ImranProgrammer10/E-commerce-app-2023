@@ -10,6 +10,7 @@ import { Checkbox,Radio} from 'antd';
 import { Prices } from '../components/Prices';
 import useCategory from '../hooks/useCategory';
 import { useCart } from '../context/cart';
+import MobileMenu from '../components/MobileMenu';
  
 export const HomePage = () => {
   
@@ -157,11 +158,7 @@ export const HomePage = () => {
         <div className="name">
           <span className="text">All Products</span>
         </div>
-        <Link className="link" to="/products/all-products">
-          <div className="viewAll">
-            <span className="seeAllSpan">View All</span>
-          </div>
-        </Link>
+         
       </div>
       <div className="wrapper">
         {products
@@ -191,12 +188,13 @@ export const HomePage = () => {
             )}
           </div>
      
-       
+       <MobileMenu></MobileMenu>
       </Container>
        
     </ Layout>
     
   )
+  
 }
 
  

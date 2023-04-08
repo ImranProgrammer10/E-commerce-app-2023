@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Layout from "./../../components/Layout/Layout";
 import axios from "axios";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import toast from "react-hot-toast";
 import "../../styles/AuthStyles.css";
 import { useAuth } from "../../context/auth";
@@ -79,10 +79,13 @@ const Login = () => {
               Forgot Password
             </button>
           </div>
-
+          <div className="d-flex flex-column gap-2">
           <button type="submit" className="btn btn-primary">
             LOGIN
           </button>
+          <p><small>New to E-commerce Site <Link className='text-primary' to="/register">Create New Account</Link></small></p>
+          </div>
+         
         </form>
       </div>
     </Layout>

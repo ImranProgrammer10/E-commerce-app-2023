@@ -8,6 +8,7 @@ import "../styles/ProductDetailsStyles.css";
 import { FaShoppingCart } from "react-icons/fa";
 import { useCart } from "../context/cart";
 import { toast } from "react-hot-toast";
+import MobileMenu from "../components/MobileMenu";
 
 const ProductDetails = () => {
   const params = useParams();
@@ -121,7 +122,7 @@ const ProductDetails = () => {
               
           </CardWrapper>
                
-              
+              <MobileMenu></MobileMenu>
                </ Container>
                 
               
